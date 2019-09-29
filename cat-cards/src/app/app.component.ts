@@ -13,7 +13,6 @@ export class AppComponent {
   parentSubject: Subject<string> = new Subject();
 
   constructor() {
-    console.log(environment.jennivar);
   }
   cardAnimation(value) {
     this.parentSubject.next(value);

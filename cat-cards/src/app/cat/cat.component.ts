@@ -9,7 +9,7 @@ import { CatService } from './cat.service';
 })
 export class CatComponent implements OnInit {
   public cat: Cat;       // passing to child component
-  private catVoting = false;
+  public catVoting = false;
 
   @ViewChild('countLikes', {static: true}) countLikes: ElementRef;
 
