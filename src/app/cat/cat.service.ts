@@ -23,7 +23,7 @@ export class CatService {
   public cats: Cat[] = [
     {
       id: 'Loading Cat',
-      pictureUrl: '/assets/cat.jpg',
+      pictureUrl: 'assets/cat.jpg',
       height: 23,
       width: 30,
       categorieName: 'Loading Cat',
