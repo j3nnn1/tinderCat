@@ -64,14 +64,17 @@ https://cataas.com/cat/says/thanks
  npm install -g angular-cli-ghpages
 ```
 
-- editar en master...
+- edit master...
 
-- en el branch master:
+- in branch master:
 	ng build --prod --base-href="https://j3nnn1.github.io/tinderCat/" --deploy-url="https://j3nnn1.github.io/tinderCat/"
 
-- en el branch gh-pages:
+- in branch gh-pages:
 ngh
 
-- y luego colocar credenciales de github.
+- and later put credentials
 
-con git log puedes ver los cambios del ultimo commit o que se envio los cambios al branch
+with git log yu can see the changes made it to sent.
+
+Note: to not go remote
+ngh --dry-run
