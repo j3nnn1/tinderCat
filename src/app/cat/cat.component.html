@@ -1,6 +1,0 @@
-<div style="height: 270px; " >
-    <img [src]="cat.pictureUrl" title="tphoto" alt="Cat Photo" style="border-radius: 20px; width:100%; height: 100%;" (click)="fetchNewRandomCat()"/><!-- property binding one way -->
-</div>
-<app-cat-controls [catVotingId]="cat.id"></app-cat-controls>
-<p *ngIf="catVoting"> votaste al gato! </p>
-<app-summary [catSearchId]="cat.id" [catWidth]="cat.width" [catHeight]="cat.height"><app-summary>
