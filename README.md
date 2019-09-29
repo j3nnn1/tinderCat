@@ -58,3 +58,6 @@ https://cataas.com/#/
 https://cataas.com/#/about
 
 https://cataas.com/cat/says/thanks
+
+## using angular/cli with ghpages
+ng build --prod --base-href "https://j3nnn1.github.io/tinderCat/"
