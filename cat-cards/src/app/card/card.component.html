@@ -1,0 +1,13 @@
+<div
+     [@cardAnimator]="animationState"
+     (@cardAnimator.done)="resetAnimationState($event)"
+     (swipeleft)='startAnimation("swipeleft")'
+     (swiperight)='startAnimation("swiperight")'
+     style="margin: 10px;"
+
+>
+<router-outlet> </router-outlet>
+
+</div>
+
+    

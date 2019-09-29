@@ -1,0 +1,29 @@
+
+/* You can add global styles to this file, and also import other style files */
+/* @import "../node_modules/bootstrap/dist/css/bootstrap.min.css"; to use bootstrap */
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.alert-danger {
+  background-color: #F8d7dA; /* Red */
+  color: #721C24 !important;
+  font-style: normal;
+  font-weight: bold;
+}
+.alert-success {
+  background-color: #D4EDDA;
+  color: #155724 !important;
+  font-style: normal;
+  font-weight: bold;
+}
+.alert{
+  margin: 15px;
+  padding: 8px;
+  color: white;
+  margin-bottom: 15px;
+  text-align: center;
+  border-radius: 18px;
+}

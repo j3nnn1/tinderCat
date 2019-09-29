@@ -1,0 +1,44 @@
+<br/>
+<div class="row">
+        <div class=".col-12 .col-sm-6 .col-lg-8">
+        <img src="{{ cat.url }}" style="width: 60%;">
+</div>
+
+<div class="row" class=".col-12 .col-sm-6 .col-lg-8">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col"> Nombre: </th>
+          <th scope="col">
+            <mat-form-field  appearance="standard" style="width: 100%" [floatLabel]="auto">
+              <mat-label> Nombre: </mat-label>
+              <input matInput placeholder="Nombre" value="{{ cat.name }}" class="cat_name" required>
+              <mat-hint>Nombre</mat-hint>
+            </mat-form-field>
+          </th>
+        </tr>
+        <tr>
+          <th scope="col"> Id: </th>
+          <td>
+            <mat-form-field  appearance="outline">
+              <mat-label> Id: </mat-label>
+              <input matInput placeholder="Id" value="{{ cat.id }}" class="cat_id" required>
+              <mat-hint>Id</mat-hint>
+            </mat-form-field>
+          </td>
+
+        </tr>
+        </thead>
+        <tr>
+
+          <th scope="col"> URL: </th>
+          <td>
+            <mat-form-field  appearance="outline">
+              <mat-label> Url: </mat-label>
+              <input matInput placeholder="url"  value="{{ cat.url }}" class="cat_description" required>
+              <mat-hint>Url</mat-hint>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+</div>

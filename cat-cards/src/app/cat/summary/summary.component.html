@@ -1,0 +1,10 @@
+<mat-grid-list cols="4" rowHeight="50px" class="tname">                                  <!-- directives list elements from catComponent -->
+  <mat-grid-tile
+    *ngFor="let tile of tiles"
+    [colspan]="tile.cols"
+    [rowspan]="tile.rows"
+    [style.background]="tile.color">
+    {{tile.text}}                                                           <!-- string interpolation -->
+  </mat-grid-tile>
+</mat-grid-list>
+
