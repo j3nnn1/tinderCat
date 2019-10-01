@@ -1,24 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Cat } from './cat.model';
-import { HttpClient, HttpHeaders} from '@angular/common/http';
-import { CatInterface } from './interfaces/cat.interface';
+
 import { Voting } from './interfaces/voting.interface';
 import { Subject } from 'rxjs';
+import { TheApiCat } from '../adapter/TheApiCat';
 
 @Injectable({providedIn: 'root'})
 
 export class CatService {
 
-
-  private randomCatUrl      = 'https://api.thecatapi.com/v1/images/search';
-  private votingCatUrl      = 'https://api.thecatapi.com/v1/votes';
   public didVote = false;
-
-  private httpOptions = {
-      headers: new HttpHeaders({'x-api-key': 'DEMO-API-KEY', 'Access-Control-Allow-Origin': '*' }),
-  };
-
-  public isPictureUrlAccesible = false;
   public cat: Cat;
   public cats: Cat[] = [
     {
@@ -34,20 +25,8 @@ export class CatService {
 
   votingEmmiter = new Subject<boolean>();
 
-  constructor(private http: HttpClient) {
+  constructor(private apiCat: TheApiCat) {
     this.cat = this.cats[0];
-  }
-
-  isAccesibleResource(cat: Cat) {
-        console.log('isAccesibleResource');
-        console.log(this.http.get(cat.pictureUrl, {observe: 'response'}).subscribe( response => {
-
-          console.log('status');
-          console.log(response.status);
-          console.log('statusText');
-          console.log(response.statusText);
-        }));
-        this.isPictureUrlAccesible = true;
   }
 
   getCatById(catId: number) {
@@ -63,7 +42,7 @@ export class CatService {
   }
 
   getRandomCat() {
-    return this.http.get<CatInterface[]>(this.randomCatUrl, this.httpOptions);
+    return this.apiCat.getRandomCat();
   }
   getCat() {
     return this.cat;
@@ -73,21 +52,11 @@ export class CatService {
     const formData = new FormData();
     formData.append('file', file);
     formData.append('sub_id', 'iwjaja');
-
-    return this.http.post(
-      'https://api.thecatapi.com/v1/images/upload',
-           formData,
-      this.httpOptions);
+    return this.apiCat.addACat(formData);
   }
 
   votingCat(userVote: Voting) {
-    console.log('cat service::votingCat ', userVote);
-
-    return this.http.post(
-        this.votingCatUrl,
-        userVote,
-        this.httpOptions
-    );
+    return this.apiCat.voteACat(userVote);
   }
 
 }

@@ -1,4 +1,4 @@
-export interface CatInterface {
+export interface RandomCatResponseFromApiCat {
     breeds: [];
     height: number;
     id: string;
