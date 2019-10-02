@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   apiCatBaseUrl: 'https://api.thecatapi.com/',
-  apiCatVersion: 'v1/',
+  apiCatVersion: 'v1',
   apiCatAddCatAction: 'images/upload/',
   apiCatVoteACatAction: 'votes/',
   apiCatGetRandomCatAction: 'images/search/',
