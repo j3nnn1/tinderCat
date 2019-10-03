@@ -12,23 +12,29 @@ import {Cat} from '../cat/cat.model';
 export class CatDetailsComponent implements OnInit {
 
   public cat: Cat;
+  public id: string;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private catService: CatService) {
-
-
   }
-
   ngOnInit() {
-    const id = this.route.snapshot.params.id;
-    this.route.params.subscribe(
-      (params: Params) => {
-        this.cat = this.catService.getCatById(+params.id);
-      }
+    this.id = this.route.snapshot.params.id;
+    this.cat = new Cat(this.id, 'https://cdn2.thecatapi.com/images/Knd8w4YdX.jpg', 0, 0, 'noname');
+
+    this.catService.getCatById(this.id).subscribe(
+          (data) => {
+              this.cat.id = data.id;
+              this.cat.height =  data.height;
+              this.cat.width = data.width;
+              this.cat.url = data.url;
+              this.cat.name = data.id;
+          }
     );
-    console.log('El id a buscar detalle: ' + id);
+    this.route.params.subscribe((params: Params) => {
+        this.id = params.id;
+    });
   }
 
 }

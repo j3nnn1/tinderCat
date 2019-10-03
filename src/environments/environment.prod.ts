@@ -5,5 +5,6 @@ export const environment = {
   apiCatAddCatAction: 'images/upload/',
   apiCatVoteACatAction: 'votes/',
   apiCatGetRandomCatAction: 'images/search/',
+  apiCatGetCatByImageIdAction: 'images',
   apiCatXApiKey: 'DEMO-API-KEY'
 };

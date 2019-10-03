@@ -33,7 +33,7 @@ export class CatComponent implements OnInit {
         (data) => {
           const randomCat = data.shift();
           this.cat.id = randomCat.id;
-          this.cat.pictureUrl = randomCat.url;
+          this.cat.url = randomCat.url;
           this.cat.width = randomCat.width;
           this.cat.height = randomCat.height;
           this.catVoting = false;

@@ -14,7 +14,7 @@ export class CatService {
   public cats: Cat[] = [
     {
       id: 'Loading Cat',
-      pictureUrl: 'assets/cat.jpg',
+      url: 'assets/cat.jpg',
       height: 23,
       width: 30,
       categorieName: 'Loading Cat',
@@ -29,16 +29,9 @@ export class CatService {
     this.cat = this.cats[0];
   }
 
-  getCatById(catId: number) {
-    return {
-      id: '2j0',
-      pictureUrl: 'https://cdn2.thecatapi.com/images/2j0.jp',
-      url: 'https://cdn2.thecatapi.com/images/2j0.jpg',
-      width: 400, height: 266,
-      name: ('Nombre del Gato:' + ' 2j0'),
-      lastname: 'kkkk test',
-      categorie: 2,
-      categorieName: '2j0'};
+  getCatById(catId: string) {
+    console.log('desde el cat service getCatById::::::::::::::::::::::::::::::::::::');
+    return this.apiCat.getCatByImageId(catId);
   }
 
   getRandomCat() {

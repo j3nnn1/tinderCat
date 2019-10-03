@@ -4,4 +4,5 @@ export interface RandomCatResponseFromApiCat {
     id: string;
     url: string;
     width: number;
+    original_filename?: string;
 }

@@ -67,4 +67,11 @@ export class TheApiCat implements TinderCat {
             this.httpOptions
         );
     }
+    getCatByImageId(imageId: string) {
+        console.log('imageId apicat: ' + imageId);
+        return this.http.get<RandomCatResponseFromApiCat>(
+            this.getURl(environment.apiCatGetCatByImageIdAction)  + imageId,
+            this.httpOptions
+        );
+    }
 }

@@ -22,7 +22,7 @@ export class CatControlsComponent  {
         (data) => {
           const randomCat = data.shift();
           this.catService.cat.id         = randomCat.id;
-          this.catService.cat.pictureUrl = randomCat.url;
+          this.catService.cat.url        = randomCat.url;
           this.catService.cat.height     = randomCat.height;
           this.catService.cat.width      = randomCat.width;
           this.catService.didVote        = false;
