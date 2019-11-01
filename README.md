@@ -35,6 +35,8 @@ https://stackblitz.com/edit/angular-tinder-swipe?file=src%2Fapp%2Fapp.component.
     <app-cat-controls>
 <app-component>
 
+![Cat Cards](https://github.com/j3nnn1/tinderCat/blob/master/CatCards.png?raw=true)
+
 ## some useful things to remember
 
 - routerLink ==> directiva angular para navegar por links.
