@@ -29,11 +29,13 @@ https://stackblitz.com/edit/angular-tinder-swipe?file=src%2Fapp%2Fapp.component.
  
 ## Structure
 
+```
 <app-component>
     <app-cat-header>
     <app-card> => router-outle => cat-add,  app-cat, cat-details, cat-not-found,
     <app-cat-controls>
 <app-component>
+```
 
 ![Cat Cards](https://github.com/j3nnn1/tinderCat/blob/master/CatCards.png?raw=true)
 
